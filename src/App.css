@@ -1,4 +1,11 @@
-@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
 
 :root{
   --primary-font:'Kumbh Sans', sans-serif;
@@ -10,4 +17,8 @@
   --neutral-light-grayish-blue: hsl(223, 64%, 98%);
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-black: hsl(0, 0%, 0%);
+}
+
+body{
+  width: 100vw;
 }
