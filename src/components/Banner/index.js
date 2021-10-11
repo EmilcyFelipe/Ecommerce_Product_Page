@@ -20,16 +20,22 @@ import plus from '../../images/icon-plus.svg';
 
 export default function Banner({product, items, setItems}){
     const [price, setPrice] = useState(product.price);
+    const [quantity, setQuantity] = useState(0)
     const [discount, setDiscount] =useState(product.discount);
     
 
     function handleQuantity(add){
         if(add){
-            setItems(items+1)
-        }else if(items!=0){
-            setItems(items-1)
+            setQuantity(quantity+1)
+        }else if(quantity!==0){
+            setQuantity(quantity-1)
         }
     }
+
+    function handleCartItems(){
+        setItems(quantity)
+    }
+
     return(
         <Container>
         <CompanyTitle>SNEAKER COMPANY</CompanyTitle>
@@ -44,10 +50,10 @@ export default function Banner({product, items, setItems}){
         </Cost>
         <Quantity>
             <Less src={minus} onClick={()=>handleQuantity(false)}/>
-            {items}
+            {quantity}
             <More src={plus} onClick={()=>handleQuantity(true)}/>
         </Quantity>
-        <AddToCart> Add to cart</AddToCart>
+        <AddToCart onClick={handleCartItems}> Add to cart</AddToCart>
         </Container>
     )
 }

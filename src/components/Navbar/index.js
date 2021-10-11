@@ -26,7 +26,7 @@ export default function Navbar({items}){
                 </HomeMenu>
                 <Management>
                     <CartWrapper>
-                        <Items>{items>0?items:''}</Items>
+                        {items>0 && <Items>{items}</Items>}
                         <Cart src={cart}/>
                     </CartWrapper>
                     <User src={avatar}/>

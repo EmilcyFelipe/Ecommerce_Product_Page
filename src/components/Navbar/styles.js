@@ -30,13 +30,12 @@ export const CartWrapper = styled.div`
 export const Items = styled.div`
   position: absolute;
   top: -5px;
-  left: 13px;
+  left: 8px;
   width: 16px;
   font-size: 8px;
   font-weight: bold;
   border-radius: 5px;
   padding: 1px;
-
   color: var(--primary-pale-orange);
   background-color: var(--primary-orange);
   text-align: center;
@@ -44,6 +43,7 @@ export const Items = styled.div`
 
 export const Cart = styled.img`
   margin-right: 20px;
+  width: 18px;
 `;
 
 export const User = styled.img`

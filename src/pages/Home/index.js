@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar'
 import Slider from '../../components/Slider'
 import Banner from '../../components/Banner'
 export default function Home(){
-    const [items, setItems] = useState(2);
+    const [items, setItems] = useState(0);
 
     var product = {
         id:'01',
