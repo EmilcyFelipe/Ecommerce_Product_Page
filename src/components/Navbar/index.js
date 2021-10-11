@@ -4,6 +4,8 @@ import {Container,
     Menu, 
     Logo, 
     Management, 
+    CartWrapper,
+    Items,
     Cart, 
     User} from './styles';
 
@@ -23,7 +25,10 @@ export default function Navbar({items}){
                     <Logo src={logo}/>
                 </HomeMenu>
                 <Management>
-                    <Cart src={cart}>{items>0?items:''}</Cart>
+                    <CartWrapper>
+                        <Items>{items>0?items:''}</Items>
+                        <Cart src={cart}/>
+                    </CartWrapper>
                     <User src={avatar}/>
                 </Management>
             </Container>
