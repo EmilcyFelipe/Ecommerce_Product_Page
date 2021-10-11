@@ -1,19 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from '../../components/Navbar'
 import Slider from '../../components/Slider'
-import Description from '../../components/Banner'
+import Banner from '../../components/Banner'
 export default function Home(){
+    const [items, setItems] = useState(0);
 
     var product = {
         id:'01',
-        name:'sneaker',
-        
+        name:'Autumn Limited Edition',
+        price: 250,
+        discount: 0.5,
+        photo:'',
+        description: ''
     }
     return(
         <>
-        <Navbar/>
+        <Navbar items={items}/>
         <Slider/>
-        <Description/>
+        <Banner product={product} items={items} setItems={setItems}/>
         </>
     )
 }

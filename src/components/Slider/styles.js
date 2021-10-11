@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    display: flex;
     width: 100%;
     position: relative;
+    height: 250px;
+    overflow: hidden;
+    align-items: center;
 `;
 
 export const SliderWrapper = styled.div`
     width: 100%;
-    `;
+`;
 
 export const SliderItem = styled.img`
     width: 100%;
+    object-fit: cover; 
 `
 
 export const LeftButton = styled.div`

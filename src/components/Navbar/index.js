@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Container, 
     HomeMenu, 
     Menu, 
@@ -14,7 +14,7 @@ import avatar from '../../images/image-avatar.png'
 
 
 
-export default function Navbar(){
+export default function Navbar({items}){
     return(
         <>
             <Container>
@@ -23,7 +23,7 @@ export default function Navbar(){
                     <Logo src={logo}/>
                 </HomeMenu>
                 <Management>
-                    <Cart src={cart}/>
+                    <Cart src={cart}>{items>0?items:''}</Cart>
                     <User src={avatar}/>
                 </Management>
             </Container>
