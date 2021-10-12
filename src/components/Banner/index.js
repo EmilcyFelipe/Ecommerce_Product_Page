@@ -32,8 +32,24 @@ export default function Banner({product, items, setItems}){
         }
     }
 
+    const [ indiceProduct, setIndiceProduct ] = useState(0) 
+
     function handleCartItems(){
-        setItems(quantity)
+        let itemsVar = Array.from(items);
+        let id = indiceProduct;
+        for(var i=0; i<quantity; i++){
+            itemsVar.push({
+                id:id,
+                name:product.name,
+                price: product.price,
+                discount: product.discount,
+                photo:product.photo,
+                description: product.description
+            });  
+            setIndiceProduct(indiceProduct+1);
+        }
+        setItems(itemsVar)
+        console.log(items)
     }
 
     return(
