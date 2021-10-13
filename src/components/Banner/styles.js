@@ -12,15 +12,15 @@ export const CompanyTitle = styled.h5`
     margin-bottom: 15px;
 `;
 
-export const DescTitle =  styled.h3`
+export const DescTitle =  styled.h2`
     margin-bottom: 15px;
     color: var(--neutral-very-dark-blue);
-    font-size: 20px;
+    
 `;
 
 export const Desc = styled.p`
     color: var(--neutral-dark-grayish-blue);
-    font-size: 12px;
+    font-size: 16px;
     line-height: 20px;
 `;
 
@@ -87,4 +87,5 @@ export const AddToCart = styled.div`
     font-size: 12px;
     text-align: center;
     color: var(--primary-pale-orange);
+    margin-top: 15px;
 `;

@@ -2,23 +2,30 @@ import React,{useState} from 'react'
 import Navbar from '../../components/Navbar'
 import Slider from '../../components/Slider'
 import Banner from '../../components/Banner'
+import {Container} from './styles'
+import Cart from '../../components/Cart'
 export default function Home(){
-    const [items, setItems] = useState([]);
-    
     var product = {
-        id:'',
+        id:'01',
         name:'Autumn Limited Edition',
         price: 250,
         discount: 0.5,
         photo:'',
-        description: ''
+        description: '',
+        quantity: 0
     }
 
+
+    const [items, setItems] = useState([product]);
+    const [showCart, setShowCart] = useState(false);
+
+
     return(
-        <>
-        <Navbar items={items}/>
+        <Container>
+        {showCart && <Cart items={items} setItems={setItems} show={setShowCart}/>}
+        <Navbar items={items} show={setShowCart}/>
         <Slider/>
         <Banner product={product} items={items} setItems={setItems}/>
-        </>
+        </Container>
     )
 }

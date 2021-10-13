@@ -36,20 +36,31 @@ export default function Banner({product, items, setItems}){
 
     function handleCartItems(){
         let itemsVar = Array.from(items);
-        let id = indiceProduct;
-        for(var i=0; i<quantity; i++){
-            itemsVar.push({
-                id:id,
+        let total = parseInt(itemsVar[0].quantity) + quantity;
+        if(itemsVar.length>0){
+            itemsVar=[{
+                id:product.id,
                 name:product.name,
                 price: product.price,
                 discount: product.discount,
                 photo:product.photo,
-                description: product.description
-            });  
-            setIndiceProduct(indiceProduct+1);
+                description: product.description,
+                quantity: total
+            }];    
         }
+        else{
+            itemsVar[0]=[{
+                id:product.id,
+                name:product.name,
+                price: product.price,
+                discount: product.discount,
+                photo:product.photo,
+                description: product.description,
+                quantity: quantity
+        }]
+    }
         setItems(itemsVar)
-        console.log(items)
+        setQuantity(0)
     }
 
     return(

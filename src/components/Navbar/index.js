@@ -16,7 +16,10 @@ import avatar from '../../images/image-avatar.png'
 
 
 
-export default function Navbar({items}){
+export default function Navbar({items,show}){
+    function showCart(){
+        show(true)
+    }
     return(
         <>
             <Container>
@@ -25,8 +28,8 @@ export default function Navbar({items}){
                     <Logo src={logo}/>
                 </HomeMenu>
                 <Management>
-                    <CartWrapper>
-                        {items.length>0 && <Items>{items.length}</Items>}
+                    <CartWrapper onClick={showCart}>
+                        {items[0].quantity>0 && <Items>{items[0].quantity}</Items>}
                         <Cart src={cart}/>
                     </CartWrapper>
                     <User src={avatar}/>
