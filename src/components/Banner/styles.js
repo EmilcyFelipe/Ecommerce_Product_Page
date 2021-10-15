@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     padding: 20px;
     @media(min-width:500px){
-      width: 375px;
+      min-width:375px;
+      max-width: 500px;
       height:375px;
     }
 
@@ -33,6 +34,9 @@ export const Cost = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+    @media(min-width:500px){
+        flex-direction: column;
+    }
 `;
 
 export const PriceContainer = styled.div`
@@ -61,7 +65,17 @@ export const OriginalPrice = styled.p`
     font-size: 14px;
     font-weight: bold;
     color: var(--neutral-grayish-blue);
+    @media(min-width:500px){
+        margin-top: 10px;
+    }
 `;
+
+export const SetItemsContainer = styled.div`
+@media(min-width:500px){
+    display: flex;
+    align-items: center;
+}
+`
 
 export const Quantity = styled.div`
     margin-top: 20px;
@@ -73,7 +87,8 @@ export const Quantity = styled.div`
     align-items: center;
     width: 100%;
     padding: 15px;
-    background-color: var(--neutral-light-grayish-blue)
+    background-color: var(--neutral-light-grayish-blue);
+
 `;
 
 export const Less = styled.img`
@@ -83,7 +98,9 @@ export const Less = styled.img`
 export const More = styled.img`
 `;
 
+
 export const AddToCart = styled.div`
+
     width: 100%;
     background-color: var(--primary-orange);
     border-radius: 7px;

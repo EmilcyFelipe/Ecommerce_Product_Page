@@ -9,13 +9,40 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const HomeMenu = styled.div``;
+export const HomeMenu = styled.div`
+  @media(min-width:500px){
+    display: flex;
+  }
 
-export const Menu = styled.img``;
+`;
+
+export const Menu = styled.img`
+   @media(min-width:500px){
+    display: none;
+  }
+`;
 
 export const Logo = styled.img`
   margin-left: 20px;
   width: 120px;
+`;
+
+export const MenuOptions = styled.div`
+  display: none;
+  width: 70%;
+  min-width: 350px;
+  max-width: 500px;
+  margin-left: 20px;
+
+  @media(min-width:500px){
+    display: flex;
+    justify-content: space-evenly;
+  }
+  a{
+    font-weight: bold;
+    color: var(--neutral-grayish-blue)
+
+  }
 `;
 
 export const Management = styled.div`

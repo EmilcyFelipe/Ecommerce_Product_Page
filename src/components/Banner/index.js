@@ -9,6 +9,7 @@ import {
     Price,
     DiscountPer, 
     OriginalPrice, 
+    SetItemsContainer,
     Quantity,
     Less,
     More,
@@ -76,12 +77,14 @@ export default function Banner({product, items, setItems}){
             </PriceContainer>
             <OriginalPrice>${price.toFixed(2)}</OriginalPrice>
         </Cost>
-        <Quantity>
-            <Less src={minus} onClick={()=>handleQuantity(false)}/>
-            {quantity}
-            <More src={plus} onClick={()=>handleQuantity(true)}/>
-        </Quantity>
-        <AddToCart onClick={handleCartItems}><img src={iconCart} style={{height:'10px'}}/> Add to cart</AddToCart>
+        <SetItemsContainer>
+            <Quantity>
+                <Less src={minus} onClick={()=>handleQuantity(false)}/>
+                {quantity}
+                <More src={plus} onClick={()=>handleQuantity(true)}/>
+            </Quantity>
+            <AddToCart onClick={handleCartItems}><img src={iconCart} style={{height:'10px'}}/> Add to cart</AddToCart>
+        </SetItemsContainer>
         </Container>
     )
 }

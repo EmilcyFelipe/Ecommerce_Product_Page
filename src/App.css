@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--primary-font);
+  text-decoration: none;
 }
 
 :root{
@@ -16,7 +17,7 @@
   --neutral-grayish-blue: hsl(220, 14%, 75%);
   --neutral-light-grayish-blue: hsl(223, 64%, 98%);
   --neutral-white: hsl(0, 0%, 100%);
-  --neutral-black: hsl(0, 0%, 0%);
+  --neutral-black: hsl(0, 0%, 0%,.7);
 }
 
 body{

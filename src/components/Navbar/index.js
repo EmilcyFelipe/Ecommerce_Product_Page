@@ -3,6 +3,7 @@ import {Container,
     HomeMenu, 
     Menu, 
     Logo, 
+    MenuOptions,
     Management, 
     CartWrapper,
     Items,
@@ -26,6 +27,13 @@ export default function Navbar({items,show}){
                 <HomeMenu>
                     <Menu src={menu}/>
                     <Logo src={logo}/>
+                    <MenuOptions>
+                        <a href="">Collections</a>
+                        <a href="">Men</a>
+                        <a href="">Women</a>
+                        <a href="">About</a>
+                        <a href="">Contact</a>
+                    </MenuOptions>
                 </HomeMenu>
                 <Management>
                     <CartWrapper onClick={showCart}>

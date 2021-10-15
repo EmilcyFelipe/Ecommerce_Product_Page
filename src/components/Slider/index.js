@@ -17,7 +17,7 @@ import next from '../../images/icon-next.svg';
 import previous from '../../images/icon-previous.svg'
 import PreviousImages from '../PreviousImages';
 
-export default function Slider(){
+export default function Slider({setZoom, home}){
     const photoList = [p1,p2,p3,p4]
     const[photoId, setPhotoId] = useState(0)
 
@@ -31,12 +31,18 @@ export default function Slider(){
             setPhotoId(photoId-1)
         }
     }
+
+    function showZoom(){
+        if(home){
+            setZoom(true);
+        }
+    }
     
     return(
         <>
             <Container>
                 <SliderElements>
-                    <SliderWrapper>
+                    <SliderWrapper onClick={showZoom}>
                         <SliderItem src={photoList[photoId]} alt="" />
                     </SliderWrapper>
                     <PreviousImages setphotoActive={setPhotoId}/>
