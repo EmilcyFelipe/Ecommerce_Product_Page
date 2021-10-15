@@ -11,7 +11,7 @@ export default function Cart({items,setItems, show}){
         <Container onClick={closeCart}>
             <CartWrapper>
                 <Title>Cart</Title>
-                <hr style={{}}/>
+                <hr style={{borderColor:'hsl(220, 14%, 75%,0.2)'}}/>
                     <table style={{width:"100%"}}>
                         <tbody>
                             {

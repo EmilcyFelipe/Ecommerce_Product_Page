@@ -17,6 +17,7 @@ import {
 
 import minus from '../../images/icon-minus.svg';
 import plus from '../../images/icon-plus.svg';
+import iconCart from '../../images/icon-cart-w.svg'
 
 export default function Banner({product, items, setItems}){
     const [price, setPrice] = useState(product.price);
@@ -80,7 +81,7 @@ export default function Banner({product, items, setItems}){
             {quantity}
             <More src={plus} onClick={()=>handleQuantity(true)}/>
         </Quantity>
-        <AddToCart onClick={handleCartItems}> Add to cart</AddToCart>
+        <AddToCart onClick={handleCartItems}><img src={iconCart} style={{height:'10px'}}/> Add to cart</AddToCart>
         </Container>
     )
 }

@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-padding: 20px;
+    padding: 20px;
+    @media(min-width:500px){
+      width: 375px;
+      height:375px;
+    }
 
 `;
 
@@ -63,6 +67,7 @@ export const Quantity = styled.div`
     margin-top: 20px;
     display: flex;
     color: var(--neutral-very-dark-blue);
+    border-radius: 10px;
     font-weight: bold;
     justify-content: space-between;
     align-items: center;

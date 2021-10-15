@@ -4,19 +4,42 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     position: relative;
-    height: 250px;
+    height: 275px;
     overflow: hidden;
-    align-items: center;
+    
+    @media(min-width:500px){
+        width: 50%;
+        max-width: 500px;
+        min-width: 350px;
+        height: auto;
+        align-items: center;
+        
+    }
+`;
+
+export const SliderElements = styled.div`
+    
 `;
 
 export const SliderWrapper = styled.div`
-    width: 100%;
+    overflow: hidden;
+    @media(min-width:500px){
+        display: flex;
+        max-height: 500px;
+        max-width: 500px;
+        background-color: black;
+        border-radius: 20px;
+    }
 `;
 
 export const SliderItem = styled.img`
     width: 100%;
-    object-fit: cover; 
+    @media(min-width:500px){
+        object-fit: cover;
+    }
+    
 `
+
 
 export const LeftButton = styled.div`
     display: flex;
@@ -30,6 +53,9 @@ export const LeftButton = styled.div`
     top: 45%;
     left: 15px;
     cursor: pointer;
+    @media(min-width:500px){
+       display: none;
+    }
 `;
 
 export const RightButton = styled.div`
@@ -44,4 +70,7 @@ export const RightButton = styled.div`
     top: 45%;
     right: 15px;
     cursor: pointer;
+    @media(min-width:500px){
+       display: none;
+    }
 `;

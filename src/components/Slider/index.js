@@ -1,6 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import{Container, SliderWrapper, SliderItem, LeftButton, RightButton} from './styles';
+import{
+    Container, 
+    SliderElements,
+    SliderWrapper, 
+    SliderItem, 
+    LeftButton, 
+    RightButton
+} from './styles';
 
 import p1 from '../../images/product/image-product-1.jpg';
 import p2 from '../../images/product/image-product-2.jpg';
@@ -8,6 +15,7 @@ import p3 from '../../images/product/image-product-3.jpg';
 import p4 from '../../images/product/image-product-4.jpg';
 import next from '../../images/icon-next.svg';
 import previous from '../../images/icon-previous.svg'
+import PreviousImages from '../PreviousImages';
 
 export default function Slider(){
     const photoList = [p1,p2,p3,p4]
@@ -27,10 +35,13 @@ export default function Slider(){
     return(
         <>
             <Container>
-                <SliderWrapper>
-                    <SliderItem src={photoList[photoId]} alt="" />
-
-                </SliderWrapper>
+                <SliderElements>
+                    <SliderWrapper>
+                        <SliderItem src={photoList[photoId]} alt="" />
+                    </SliderWrapper>
+                    <PreviousImages setphotoActive={setPhotoId}/>
+                </SliderElements>
+                
                 <LeftButton onClick={changePhotoToLeft}><img style={{height:"10px"}} src={previous} alt="previous"/></LeftButton>
                 <RightButton onClick={changePhotoToRight}><img style={{height:"10px"}} src={next} alt="previous"/></RightButton>
             </Container>
