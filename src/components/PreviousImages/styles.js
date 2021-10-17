@@ -5,10 +5,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     height: 100px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin-top: 20px;
-
+    @media(min-width:500px){
+    display: flex;
+}
     .selectedBorder{
         border: solid 3px var(--primary-orange);
     }

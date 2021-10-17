@@ -45,11 +45,11 @@ export default function Slider({setZoom, home}){
                     <SliderWrapper onClick={showZoom}>
                         <SliderItem src={photoList[photoId]} alt="" />
                     </SliderWrapper>
-                    <PreviousImages setphotoActive={setPhotoId}/>
+                    <PreviousImages setphotoActive={setPhotoId} active={photoId}/>
                 </SliderElements>
                 
-                <LeftButton onClick={changePhotoToLeft}><img style={{height:"10px"}} src={previous} alt="previous"/></LeftButton>
-                <RightButton onClick={changePhotoToRight}><img style={{height:"10px"}} src={next} alt="previous"/></RightButton>
+                <LeftButton style={home===false?{display:'flex', left:'-15px'}:{}} onClick={changePhotoToLeft}><img style={{height:"10px"}} src={previous} alt="previous"/></LeftButton>
+                <RightButton style={home===false?{display:'flex', right:'-15px'}:{}} onClick={changePhotoToRight}><img style={{height:"10px"}} src={next} alt="previous"/></RightButton>
             </Container>
         </>
     )

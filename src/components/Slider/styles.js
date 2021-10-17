@@ -5,7 +5,7 @@ export const Container = styled.div`
     width: 100%;
     position: relative;
     height: 275px;
-    overflow: hidden;
+    
     
     @media(min-width:500px){
         width: 100%;
@@ -24,10 +24,13 @@ export const SliderElements = styled.div`
 export const SliderWrapper = styled.div`
     overflow: hidden;
     cursor: pointer;
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @media(min-width:500px){
-        display: flex;
-        /* max-height: 500px; */
-        /* max-width: 500px; */
+        max-height: 500px;
         background-color: black;
         border-radius: 20px;
     }
@@ -35,10 +38,7 @@ export const SliderWrapper = styled.div`
 
 export const SliderItem = styled.img`
     width: 100%;
-    @media(min-width:500px){
-        object-fit: cover;
-    }
-    
+    object-fit: cover;
 `
 
 
