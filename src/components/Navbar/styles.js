@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   background-color: var(--neutral-light-grayish-blue);
   padding: 20px;
   justify-content: space-between;
+  @media(min-width:500px){
+    background:none;
+  }
+  
 `;
 
 export const HomeMenu = styled.div`
@@ -17,12 +22,13 @@ export const HomeMenu = styled.div`
 `;
 
 export const Menu = styled.img`
-   @media(min-width:500px){
+   @media(min-width:700px){
     display: none;
   }
 `;
 
 export const Logo = styled.img`
+  cursor: pointer;
   margin-left: 20px;
   width: 120px;
 `;
@@ -34,7 +40,7 @@ export const MenuOptions = styled.div`
   max-width: 500px;
   margin-left: 20px;
 
-  @media(min-width:500px){
+  @media(min-width:700px){
     display: flex;
     justify-content: space-evenly;
   }
@@ -52,6 +58,7 @@ export const Management = styled.div`
 
 export const CartWrapper = styled.div`
   position: relative;
+  cursor: pointer;
 `;
 export const Items = styled.div`
   position: absolute;
@@ -74,4 +81,18 @@ export const Cart = styled.img`
 
 export const User = styled.img`
   width: 25px;
+`;
+
+export const Line = styled.hr`
+  height: 2px;
+  border: 2px;
+  background-color:blue;
+  color: blue;
+  border-color:blue;
+  max-width:1200px;
+  margin: 30px auto;
+  
+  @media(min-width:500px){
+    
+  }
 `;

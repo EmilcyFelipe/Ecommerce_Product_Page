@@ -8,7 +8,7 @@ export const Container = styled.div`
     overflow: hidden;
     
     @media(min-width:500px){
-        width: 80%;
+        width: 100%;
         max-width: 500px;
         min-width: 350px;
         height: auto;
@@ -23,10 +23,11 @@ export const SliderElements = styled.div`
 
 export const SliderWrapper = styled.div`
     overflow: hidden;
+    cursor: pointer;
     @media(min-width:500px){
         display: flex;
-        max-height: 500px;
-        max-width: 500px;
+        /* max-height: 500px; */
+        /* max-width: 500px; */
         background-color: black;
         border-radius: 20px;
     }

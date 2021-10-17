@@ -23,6 +23,8 @@ export const ImageWrapper = styled.div`
     height: 80px;
     overflow: hidden;
     border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
 
     img{
         width: 100%;

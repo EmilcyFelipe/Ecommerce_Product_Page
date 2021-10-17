@@ -74,6 +74,7 @@ export const SetItemsContainer = styled.div`
 @media(min-width:500px){
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 `
 
@@ -88,19 +89,21 @@ export const Quantity = styled.div`
     width: 100%;
     padding: 15px;
     background-color: var(--neutral-light-grayish-blue);
-
+    @media(min-width:500px){
+        max-width: 200px ;
+    }
 `;
 
 export const Less = styled.img`
-
+    cursor: pointer;
 `;
 
 export const More = styled.img`
+    cursor: pointer;
 `;
 
 
 export const AddToCart = styled.div`
-
     width: 100%;
     background-color: var(--primary-orange);
     border-radius: 7px;
@@ -110,4 +113,8 @@ export const AddToCart = styled.div`
     text-align: center;
     color: var(--primary-pale-orange);
     margin-top: 15px;
+    cursor: pointer;
+    @media(min-width:500px){
+        
+    }
 `;

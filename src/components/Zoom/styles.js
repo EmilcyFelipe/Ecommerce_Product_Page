@@ -12,8 +12,7 @@ export const Container = styled.div`
     align-items: center;
 
     .zoom-wrapper{
-        width: 80%;
-        background-color: antiquewhite;
+        height: auto;
         position: relative;
         display: flex;
         justify-content: center;
@@ -23,6 +22,7 @@ export const Container = styled.div`
         position: absolute;
         right: 0;
         top: -30px;
+        cursor: pointer;
     }
     
 `;

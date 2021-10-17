@@ -16,6 +16,15 @@ export const CartWrapper = styled.div`
     border-radius: 10px;
     background-color: azure;
     box-shadow: 2px 2px 3rem rgba(0,0,0,.3);
+
+    .emptyCart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: var(--neutral-dark-grayish-blue);
+        flex
+    }
 `;
 export const Title = styled.h3`
     font-size: 14px;
@@ -32,4 +41,5 @@ export const CheckoutButton = styled.div`
     color: var(--neutral-white);
     padding: 15px 0;
     text-align: center;
+    cursor: pointer;
 `;

@@ -36,5 +36,5 @@ export const Total = styled.p`
     margin-left: 5px;
 `;
 export const DeleteIcon =  styled.img`
-
+    cursor: pointer;
 `;

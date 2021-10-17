@@ -8,7 +8,8 @@ import {Container,
     CartWrapper,
     Items,
     Cart, 
-    User} from './styles';
+    User,
+    Line} from './styles';
 
 import menu from '../../images/icon-menu.svg'
 import logo from '../../images/logo.svg'
@@ -43,6 +44,7 @@ export default function Navbar({items,show}){
                     <User src={avatar}/>
                 </Management>
             </Container>
+            <Line/>
         </>
     )
 }

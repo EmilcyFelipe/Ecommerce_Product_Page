@@ -10,9 +10,8 @@ export default function Zoom({setZoom}){
     return(
         <Container>
             <div className="zoom-wrapper">
-                <div className="icon-close"><img src={close} alt="" /></div>
-                <Slider home={false} />
-
+                <div className="icon-close" onClick={handleZoom}><img src={close} alt="" /></div>
+                <Slider home={false}/>
             </div>
         </Container>
     );

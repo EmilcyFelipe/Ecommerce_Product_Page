@@ -4,22 +4,24 @@ import {Container, CartWrapper, Title, CheckoutButton} from './styles'
 
 
 export default function Cart({items,setItems, show}){
-    function closeCart(){
-        show(false)
+    function closeCart(e){
+        if(e.target.id==="cartContainer"){
+            show(false)
+        }
     }
     return(
-        <Container onClick={closeCart}>
+        <Container id="cartContainer" onClick={closeCart}>
             <CartWrapper>
                 <Title>Cart</Title>
                 <hr style={{borderColor:'hsl(220, 14%, 75%,0.2)'}}/>
-                    <table style={{width:"100%"}}>
+                {items[0].quantity===0 && <div className='emptyCart'>Your cart is empty.</div>}
+                   {items[0].quantity>0 && (<><table style={{width:"100%"}}>
                         <tbody>
-                            {
-                                items[0].quantity>0 ?(<ItemsCart items={items} setItems={setItems}/>):(<tr><td><div style={{textAlign:'center'}}>Adicione itens no carrinho</div></td></tr>)
-                            }
+                            <ItemsCart items={items} setItems={setItems}/>
                         </tbody>
                     </table>
-                <CheckoutButton>Checkout</CheckoutButton>
+                    <CheckoutButton>Checkout</CheckoutButton></>)
+                    }
             </CartWrapper>
 
         </Container>
