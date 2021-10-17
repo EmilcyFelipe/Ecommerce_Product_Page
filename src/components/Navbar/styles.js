@@ -84,15 +84,14 @@ export const User = styled.img`
 `;
 
 export const Line = styled.hr`
-  height: 2px;
-  border: 2px;
-  background-color:blue;
-  color: blue;
-  border-color:blue;
-  max-width:1200px;
-  margin: 30px auto;
-  
+  display: none;
   @media(min-width:500px){
-    
+    display: block;
+    border:.2px solid rgba(0,0,0,.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
   }
+  
+  
 `;
