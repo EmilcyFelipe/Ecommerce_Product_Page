@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     CompanyTitle, 
     Container, 
@@ -21,9 +21,14 @@ import plus from '../../images/icon-plus.svg';
 import iconCart from '../../images/icon-cart-w.svg'
 
 export default function Banner({product, items, setItems}){
-    const [price, setPrice] = useState(product.price);
+    const [price, setPrice] = useState(0);
     const [quantity, setQuantity] = useState(0)
-    const [discount, setDiscount] =useState(product.discount);
+    const [discount, setDiscount] =useState(0);
+
+    useEffect(()=>{
+        setPrice(product.price)
+        setDiscount(product.discount)
+    },[product.discount, product.price])
     
 
     function handleQuantity(add){
@@ -34,7 +39,6 @@ export default function Banner({product, items, setItems}){
         }
     }
 
-    const [ indiceProduct, setIndiceProduct ] = useState(0) 
 
     function handleCartItems(){
         let itemsVar = Array.from(items);
@@ -83,7 +87,7 @@ export default function Banner({product, items, setItems}){
                 {quantity}
                 <More src={plus} onClick={()=>handleQuantity(true)}/>
             </Quantity>
-            <AddToCart onClick={handleCartItems}><img src={iconCart} style={{height:'10px'}}/> Add to cart</AddToCart>
+            <AddToCart onClick={handleCartItems}><img src={iconCart} alt='cart' style={{height:'10px'}}/> Add to cart</AddToCart>
         </SetItemsContainer>
         </Container>
     )

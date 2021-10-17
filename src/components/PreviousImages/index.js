@@ -19,7 +19,7 @@ export default function PreviousImages({setphotoActive, active}){
         listImg[active].children[0].classList.add('selected')
         listImg[active].classList.add('selectedBorder')
 
-    },[active])
+    },[active, selectedImg])
 
     // aply class at the element selected and remove one unselected
     function activeThumb(e){
@@ -39,10 +39,10 @@ export default function PreviousImages({setphotoActive, active}){
 
     return(
         <Container className="thumbList">
-            <ImageWrapper id="thumb-0" onClick={activeThumb}><img src={p1}/></ImageWrapper> 
-            <ImageWrapper id="thumb-1" onClick={activeThumb}><img src={p2}/></ImageWrapper>
-            <ImageWrapper id="thumb-2" onClick={activeThumb}><img src={p3}/></ImageWrapper>
-            <ImageWrapper id="thumb-3" onClick={activeThumb}><img src={p4}/></ImageWrapper>
+            <ImageWrapper id="thumb-0" onClick={activeThumb}><img src={p1} alt='thumb'/></ImageWrapper> 
+            <ImageWrapper id="thumb-1" onClick={activeThumb}><img src={p2} alt='thumb'/></ImageWrapper>
+            <ImageWrapper id="thumb-2" onClick={activeThumb}><img src={p3} alt='thumb'/></ImageWrapper>
+            <ImageWrapper id="thumb-3" onClick={activeThumb}><img src={p4} alt='thumb'/></ImageWrapper>
         </Container>
     )
 }

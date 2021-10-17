@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {Container, 
     HomeMenu, 
     Menu, 
@@ -29,11 +29,11 @@ export default function Navbar({items,show}){
                     <Menu src={menu}/>
                     <Logo src={logo}/>
                     <MenuOptions>
-                        <a href="">Collections</a>
-                        <a href="">Men</a>
-                        <a href="">Women</a>
-                        <a href="">About</a>
-                        <a href="">Contact</a>
+                        <a href="/">Collections</a>
+                        <a href="/">Men</a>
+                        <a href="/">Women</a>
+                        <a href="/">About</a>
+                        <a href="/">Contact</a>
                     </MenuOptions>
                 </HomeMenu>
                 <Management>
