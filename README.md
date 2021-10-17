@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repositorie](https://github.com/EmilcyFelipe/Ecommerce_Product_Page)
+- Solution URL: [Repository](https://github.com/EmilcyFelipe/Ecommerce_Product_Page)
 - Live Site URL: [Netlify](https://ecommerce-product-felipe-de-paula.netlify.app/)
 
 ## My process
