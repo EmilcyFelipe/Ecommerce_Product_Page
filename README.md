@@ -11,8 +11,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -32,12 +30,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop](https://github.com/EmilcyFelipe/Ecommerce_Product_Page/blob/master/src/screenshots/screencapture-ecommerce-product-felipe-de-paula-netlify-app-2021-10-17-18_01_32.png)
+
+![mobile](https://github.com/EmilcyFelipe/Ecommerce_Product_Page/blob/master/src/screenshots/screencapture-ecommerce-product-felipe-de-paula-netlify-app-2021-10-17-18_02_02.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repositorie](https://github.com/EmilcyFelipe/Ecommerce_Product_Page)
+- Live Site URL: [Netlify](https://ecommerce-product-felipe-de-paula.netlify.app/)
 
 ## My process
 
@@ -59,6 +59,5 @@ I had the oportunity to improve more how to work the styled-components, that i h
 
 ## Author
 
-- Linkedin - [Felipe de Paula](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Linkedin - [Felipe de Paula](https://www.linkedin.com/in/felipe-c-de-paula-b1b7b9189/)
+- Frontend Mentor - [@EmilcyFelipe](https://www.frontendmentor.io/profile/EmilcyFelipe)
